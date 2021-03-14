@@ -5,6 +5,9 @@
         <!-- TODO -->
     </head>
     <body>
+        <?php 
+            include 'connectdb.php';
+        ?>
         <h1>Welcome to the Airline Database!</h1>
         <p>Please select what you would like to do.</p>
 

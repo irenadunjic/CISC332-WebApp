@@ -5,6 +5,9 @@
         <!-- TODO -->
     </head>
     <body>
+        <?php 
+            include 'connectdb.php';
+        ?>
         <h1>Add New Flight</h1>
     </body>
 </html>

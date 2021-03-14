@@ -5,6 +5,9 @@
         <!-- TODO -->
     </head>
     <body>
+        <?php 
+            include 'connectdb.php';
+        ?>
         <h1>Calculate Average Seats on a Given Day</h1>
     </body>
 </html>
