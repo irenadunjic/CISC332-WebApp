@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php 
-            include 'connectdb.php';
+            include '../connectdb.php';
         ?>
         <h1>Update Flight Arrival Time</h1>
     </body>
