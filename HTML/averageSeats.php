@@ -6,11 +6,13 @@
         <link rel="stylesheet" href="../CSS/airline.css">
         <link rel="stylesheet" href="../CSS/averageSeats.css">
     </head>
+    <header>
+        <h1>Calculate Average Seats on a Given Day</h1>
+    </header>
     <body>
         <?php 
             include '../connectdb.php';
         ?>
-        <h1>Calculate Average Seats on a Given Day</h1>
         <form action="../PHP/calculateAvg.php" method="post">
             <h2> Choose a Day: </h2>
             <table>
@@ -44,4 +46,7 @@
         </form>
         <button onclick="document.location='../airline.php'">Back to Homepage</button>
     </body>
+    <footer>
+        <p>Website created for CISC 332, &copy; 2021 Irena Dunjic.</p>
+    </footer>
 </html>

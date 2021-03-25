@@ -6,6 +6,12 @@
         <link rel="stylesheet" href="../CSS/airline.css">
         <link rel="stylesheet" href="../CSS/addFlight.css">
     </head>
+    <header>
+        <h1>Add New Flight</h1>
+        <p>
+            Add a new flight to the database. All provided fields except Days Offered are mandatory!
+        </p>
+    </header>
     <body>
         <?php
             include '../connectdb.php';
@@ -66,4 +72,7 @@
         <button onclick="document.location='../HTML/addFlight.php'">Add Another Flight</button>
         <button onclick="document.location='../airline.php'">Back to Homepage</button>
     </body>
+    <footer>
+        <p>Website created for CISC 332, &copy; 2021 Irena Dunjic.</p>
+    </footer>
 </html>

@@ -6,14 +6,16 @@
         <link rel="stylesheet" href="../CSS/airline.css">
         <link rel="stylesheet" href="../CSS/showFlightDays.css">
     </head>
-    <body>
-        <?php 
-            include '../connectdb.php';
-        ?>
+    <header>
         <h1>Show Flights on Given Day</h1>
         <p>
             Enter an airline code and a day to view all the associated flights.
         </p>
+    </header>
+    <body>
+        <?php 
+            include '../connectdb.php';
+        ?>
         <form action="../PHP/getFlightsByDay.php" method="post">
             <h2>Airline Code:</h2>
             <input type="text" name="airlineCode"><br>
@@ -49,4 +51,7 @@
         </form>
         <button onclick="document.location='../airline.php'">Back to Homepage</button>
     </body>
+    <footer>
+        <p>Website created for CISC 332, &copy; 2021 Irena Dunjic.</p>
+    </footer>
 </html>

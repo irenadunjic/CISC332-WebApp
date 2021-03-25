@@ -6,14 +6,16 @@
         <link rel="stylesheet" href="../CSS/airline.css">
         <link rel="stylesheet" href="../CSS/updateFlight.css">
     </head>
-    <body>
-        <?php 
-            include '../connectdb.php';
-        ?>
+    <header>
         <h1>Update Flight Arrival Time</h1>
         <p>
             Update the actual departure time for a flight. Enter time in HH:MM:SS format.
         </p>
+    </header>
+    <body>
+        <?php 
+            include '../connectdb.php';
+        ?>
         <form action="../PHP/updateDepartureTime.php" method="post">
             <h2>Choose a Flight to Update</h2>
             <table>
@@ -42,4 +44,7 @@
         </form>
         <button onclick="document.location='../airline.php'">Back to Homepage</button>
     </body>
+    <footer>
+        <p>Website created for CISC 332, &copy; 2021 Irena Dunjic.</p>
+    </footer>
 </html>

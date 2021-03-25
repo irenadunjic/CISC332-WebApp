@@ -6,6 +6,12 @@
         <link rel="stylesheet" href="../CSS/airline.css">
         <link rel="stylesheet" href="../CSS/showFlightDays.css">
     </head>
+    <header>
+        <h1>Show Flights on Given Day</h1>
+        <p>
+            Enter an airline code and a day to view all the associated flights.
+        </p>
+    </header>
     <body>
         <?php
             include '../connectdb.php';
@@ -36,4 +42,7 @@
         <button onclick="document.location='../HTML/showFlightDays.php'">Choose Another Day</button>
         <button onclick="document.location='../airline.php'">Back to Homepage</button>
     </body>
+    <footer>
+        <p>Website created for CISC 332, &copy; 2021 Irena Dunjic.</p>
+    </footer>
 </html>

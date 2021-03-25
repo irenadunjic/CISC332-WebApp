@@ -1,0 +1,6 @@
+.navButton {
+    border: 2px outset #FFA954;
+    border-radius: 4px;
+    background-image: linear-gradient(to bottom right, #FFD290, #FFF0AC);
+    padding: 15px;
+}
