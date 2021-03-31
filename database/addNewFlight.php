@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Add New Flight</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/addFlight.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/addFlight.css">
     </head>
     <body>
         <header>
@@ -71,7 +71,7 @@
                 ?>
             </ol>
             <div class="space"></div>
-            <button class="optionButton" onclick="document.location='../HTML/addFlight.php'">Add Another Flight</button>
+            <button class="optionButton" onclick="document.location='../pages/addFlight.php'">Add Another Flight</button>
             <button class="optionButton" onclick="document.location='../airline.php'">Back to Homepage</button>
         </main>
         <footer>

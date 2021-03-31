@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Flights by Arrival Time</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/showFlightTimes.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/showFlightTimes.css">
     </head>
     <body>
         <header>

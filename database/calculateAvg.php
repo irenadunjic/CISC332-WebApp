@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Calculate Average Seats</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/averageSeats.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/averageSeats.css">
     </head>
     <body>
         <header>
@@ -46,11 +46,17 @@
             </table>
             <h2>Average Number of Seats:</h2>
             <?php
-                $AVG = $TOTAL / $COUNT;
-                echo "There are ".$COUNT." flights offered on ".$DAY.", and a total of ".$TOTAL." seats across flights.<br>";
-                echo "Therefore, the average number of available seats is ".$AVG.".<br>";
+                if ($COUNT != 0) {
+                    $AVG = $TOTAL / $COUNT;
+                    echo "There are ".$COUNT." flights offered on ".$DAY.", and a total of ".$TOTAL." seats across flights.<br>";
+                    echo "Therefore, the average number of available seats is <strong>".$AVG.".</strong><br>";
+                } else {
+                    echo "There are no flights on ".$DAY.". Therefore, the average number of available seats is <strong>ZERO.</strong><br>";
+                    echo "Please select another day.<br>";
+                }
             ?>
-            <button class="optionButton" onclick="document.location='../HTML/averageSeats.php'">Choose Another Day</button>
+            <div class="space"></div>
+            <button class="optionButton" onclick="document.location='../pages/averageSeats.php'">Choose Another Day</button>
             <button class="optionButton" onclick="document.location='../airline.php'">Back to Homepage</button>
         </main>
         <footer>

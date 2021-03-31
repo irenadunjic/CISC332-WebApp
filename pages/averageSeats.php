@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Calculate Average Seats</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/averageSeats.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/averageSeats.css">
     </head>
     <body>
         <header>
@@ -14,7 +14,7 @@
             <?php 
                 include '../connectdb.php';
             ?>
-            <form action="../PHP/calculateAvg.php" method="post">
+            <form action="../database/calculateAvg.php" method="post">
                 <h2> Choose a Day: </h2>
                 <table>
                     <tr>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Airline</title>
-        <link rel="stylesheet" href="CSS/airline.css">
+        <link rel="stylesheet" href="styles/airline.css">
     </head>
     <body>
         <header>
@@ -25,11 +25,11 @@
             </p>
 
             <div class="navigation">
-            <button class="navButton" onclick="document.location='HTML/showFlightTimes.php'">Find Flights by Time</button>
-            <button class="navButton" onclick="document.location='HTML/showFlightDays.php'">Find Flights by Day</button>
-            <button class="navButton" onclick="document.location='HTML/addFlight.php'">Add New Flight</button>
-            <button class="navButton" onclick="document.location='HTML/updateFlight.php'">Update Flight Departure Time</button>
-            <button class="navButton" onclick="document.location='HTML/averageSeats.php'">Calculate Average Number of Seats</button>
+            <button class="navButton" onclick="document.location='pages/showFlightTimes.php'">Find Flights by Time</button>
+            <button class="navButton" onclick="document.location='pages/showFlightDays.php'">Find Flights by Day</button>
+            <button class="navButton" onclick="document.location='pages/addFlight.php'">Add New Flight</button>
+            <button class="navButton" onclick="document.location='pages/updateFlight.php'">Update Flight Departure Time</button>
+            <button class="navButton" onclick="document.location='pages/averageSeats.php'">Calculate Average Number of Seats</button>
             </div>
         </main>
         <footer>

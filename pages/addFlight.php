@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Add New Flight</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/addFlight.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/addFlight.css">
     </head>
     <body>
         <header>
@@ -17,7 +17,7 @@
             <?php 
                 include '../connectdb.php';
             ?>
-            <form class="flightOptions" action="../PHP/addNewFlight.php" method="post">
+            <form class="flightOptions" action="../database/addNewFlight.php" method="post">
 
                 <!--
                     Assign an Airline to the Flight
@@ -133,7 +133,7 @@
                 <div class="space"></div>
 
                 <!--
-                    Submit values and move to /PHP/addNewFlight.php
+                    Submit values and move to /database/addNewFlight.php
                 -->
                 <input class="optionButton" type="submit" value="Add Flight">
             </form>

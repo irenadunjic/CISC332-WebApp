@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Update Flight</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/updateFlight.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/updateFlight.css">
     </head>
     <body>
         <header>
@@ -28,7 +28,7 @@
                     echo "Your flight has been updated!";
                 ?>
             </ol>
-            <button class="optionButton" onclick="document.location='../HTML/updateFlight.php'">Update Another Flight</button>
+            <button class="optionButton" onclick="document.location='../pages/updateFlight.php'">Update Another Flight</button>
             <button class="optionButton" onclick="document.location='../airline.php'">Back to Homepage</button>
         </main>
         <footer>

@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Get Flights by Day</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/showFlightDays.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/showFlightDays.css">
     </head>
     <body>
         <header>
@@ -40,7 +40,7 @@
                     }
                 ?>
             </table>
-            <button class="optionButton" onclick="document.location='../HTML/showFlightDays.php'">Choose Another Day</button>
+            <button class="optionButton" onclick="document.location='../pages/showFlightDays.php'">Choose Another Day</button>
             <button class="optionButton" onclick="document.location='../airline.php'">Back to Homepage</button>
         </main>
         <footer>

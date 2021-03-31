@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Update Flight</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/updateFlight.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/updateFlight.css">
     </head>
     <body>
         <header>
@@ -17,7 +17,7 @@
             <?php 
                 include '../connectdb.php';
             ?>
-            <form action="../PHP/updateDepartureTime.php" method="post">
+            <form action="../database/updateDepartureTime.php" method="post">
                 <h2>Choose a Flight to Update</h2>
                 <table>
                     <tr>

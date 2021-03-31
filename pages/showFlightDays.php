@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Airline - Get Flights By Day</title>
-        <link rel="stylesheet" href="../CSS/airline.css">
-        <link rel="stylesheet" href="../CSS/showFlightDays.css">
+        <link rel="stylesheet" href="../styles/airline.css">
+        <link rel="stylesheet" href="../styles/showFlightDays.css">
     </head>
     <body>
         <header>
@@ -17,7 +17,7 @@
             <?php 
                 include '../connectdb.php';
             ?>
-            <form action="../PHP/getFlightsByDay.php" method="post">
+            <form action="../database/getFlightsByDay.php" method="post">
                 <h2>Airline Code:</h2>
                 <input class="textInput" ype="text" name="airlineCode"><br>
                 <div class="space"></div>
