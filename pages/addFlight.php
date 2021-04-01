@@ -97,6 +97,22 @@
                 <div class="space"></div>
 
                 <!--
+                    Assign a scheduled departure time
+                -->
+                <h2>Enter a Departure Time</h2>
+                <p>Must be in HH:MM:SS format.</p>
+                <input class="textInput" type="text" name="schDepartTime">
+                <div class="space"></div>
+
+                <!--
+                    Assign a scheduled arrival time
+                -->
+                <h2>Enter an Arrival Time</h2>
+                <p>Must be in HH:MM:SS format.</p>
+                <input class="textInput" type="text" name="schArrivalTime">
+                <div class="space"></div>
+
+                <!--
                     Optional: Assign Days Offered to the Flight
                 -->
                 <h2>Choose days of the week offered</h2>

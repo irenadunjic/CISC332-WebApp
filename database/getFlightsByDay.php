@@ -26,20 +26,31 @@
                 <?php
                     $ACode = $_POST["airlineCode"];
                     $FDay = $_POST["flightDay"];
-                    $query = 'SELECT F.AirlineCode, F.3DigitNum, Departures.City AS dcity, Arrivals.City AS acity
-                            FROM DaysOffered AS D, Flight AS F, Airport AS Departures, Airport AS Arrivals
-                            WHERE F.AirlineCode = D.AirlineCode 
-                            AND F.3DigitNum = D.3DigitNum
-                            AND Departures.AirportCode = F.DepartsFrom
-                            AND Arrivals.AirportCode = F.ArrivesTo
-                            AND F.AirlineCode = "'.$ACode.'"
-                            AND D.DaysOffered = "'.$FDay.'"';
-                    $result = $connection->query($query);
-                    while ($row = $result->fetch()) {
-                        echo "<tr><td>".$row['AirlineCode'].$row['3DigitNum']."</td>"."<td>".$row['dcity']."</td>"."<td>".$row['acity']."</td></tr>";
+                    if ($ACode == '' or !isset($FDay)) {
+                        echo "<tr><td></td><td></td><td></td></tr>";
+                    } else {
+                        $query = 'SELECT F.AirlineCode, F.3DigitNum, Departures.City AS dcity, Arrivals.City AS acity
+                                  FROM DaysOffered AS D, Flight AS F, Airport AS Departures, Airport AS Arrivals
+                                  WHERE F.AirlineCode = D.AirlineCode 
+                                  AND F.3DigitNum = D.3DigitNum
+                                  AND Departures.AirportCode = F.DepartsFrom
+                                  AND Arrivals.AirportCode = F.ArrivesTo
+                                  AND F.AirlineCode = "'.$ACode.'"
+                                  AND D.DaysOffered = "'.$FDay.'"';
+                        $result = $connection->query($query);
+                        while ($row = $result->fetch()) {
+                            echo "<tr><td>".$row['AirlineCode'].$row['3DigitNum']."</td>"."<td>".$row['dcity']."</td>"."<td>".$row['acity']."</td></tr>";
+                        }
                     }
                 ?>
             </table>
+            <div class="space"></div>
+            <?php 
+                if (($ACode == '') or !isset($FDay)) {
+                    echo "One or more required fields missing. Please try again.";
+                }
+            ?>
+            <div class="space"></div>
             <button class="optionButton" onclick="document.location='../pages/showFlightDays.php'">Choose Another Day</button>
             <button class="optionButton" onclick="document.location='../airline.php'">Back to Homepage</button>
         </main>

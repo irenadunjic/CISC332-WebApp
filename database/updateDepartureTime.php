@@ -19,13 +19,17 @@
             ?>
             <ol>
                 <?php 
-                    $FCode = $_POST['flightCode'];
-                    $NewTime = $_POST['newActDepartTime'];
+                    if (isset($_POST['flightCode']) and isset($_POST['newActDepartTime'])) {
+                        $FCode = $_POST['flightCode'];
+                        $NewTime = $_POST['newActDepartTime'];
 
-                    $query = 'UPDATE Flight SET ActDepartTime = "'.$NewTime.'" WHERE 3DigitNum = "'.$FCode.'"';
-                    $result = $connection->exec($query);
+                        $query = 'UPDATE Flight SET ActDepartTime = "'.$NewTime.'" WHERE 3DigitNum = "'.$FCode.'"';
+                        $result = $connection->exec($query);
 
-                    echo "Your flight has been updated!";
+                        echo "Your flight has been updated!";
+                    } else {
+                        echo "One or more required fields missing. Try again!";
+                    }
                 ?>
             </ol>
             <button class="optionButton" onclick="document.location='../pages/updateFlight.php'">Update Another Flight</button>

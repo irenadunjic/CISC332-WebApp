@@ -27,23 +27,28 @@
                     $COUNT = 0;
                     $TOTAL = 0;
 
-                    $query = 'SELECT D.AirlineCode, D.3DigitNum, A.AirplaneID, D.DaysOffered, AT.MaxNumSeats
-                            FROM Airplane AS A, AirplaneType AS AT, DaysOffered AS D, Flight AS F
-                            WHERE F.3DigitNum = D.3DigitNum
-                            AND F.AssignedTo = A.AirplaneID
-                            AND A.DesignedAs = AT.ATypeName
-                            AND D.DaysOffered = "'.$DAY.'"';
-                    $result = $connection->query($query);
-                    while ($row = $result->fetch()) {
-                        $COUNT = $COUNT + 1;
-                        $TOTAL = $TOTAL + $row['MaxNumSeats'];
-                        echo "<tr><td>".$row['AirlineCode'].$row['3DigitNum']."</td><td>"
-                            .$row['AirplaneID']."</td><td>"
-                            .$row['DaysOffered']."</td><td>"
-                            .$row['MaxNumSeats']."</td></tr>";
+                    if (!isset($DAY)) {
+                        echo "<tr><td></td><td></td><td></td><td></td></tr>";
+                    } else {
+                        $query = 'SELECT D.AirlineCode, D.3DigitNum, A.AirplaneID, D.DaysOffered, AT.MaxNumSeats
+                                FROM Airplane AS A, AirplaneType AS AT, DaysOffered AS D, Flight AS F
+                                WHERE F.3DigitNum = D.3DigitNum
+                                AND F.AssignedTo = A.AirplaneID
+                                AND A.DesignedAs = AT.ATypeName
+                                AND D.DaysOffered = "'.$DAY.'"';
+                        $result = $connection->query($query);
+                        while ($row = $result->fetch()) {
+                            $COUNT = $COUNT + 1;
+                            $TOTAL = $TOTAL + $row['MaxNumSeats'];
+                            echo "<tr><td>".$row['AirlineCode'].$row['3DigitNum']."</td><td>"
+                                .$row['AirplaneID']."</td><td>"
+                                .$row['DaysOffered']."</td><td>"
+                                .$row['MaxNumSeats']."</td></tr>";
+                        }
                     }
                 ?>
             </table>
+            <div class="space"></div>
             <h2>Average Number of Seats:</h2>
             <?php
                 if ($COUNT != 0) {
@@ -51,8 +56,12 @@
                     echo "There are ".$COUNT." flights offered on ".$DAY.", and a total of ".$TOTAL." seats across flights.<br>";
                     echo "Therefore, the average number of available seats is <strong>".$AVG.".</strong><br>";
                 } else {
-                    echo "There are no flights on ".$DAY.". Therefore, the average number of available seats is <strong>ZERO.</strong><br>";
-                    echo "Please select another day.<br>";
+                    if ($DAY) {
+                        echo "There are no flights on ".$DAY.". Therefore, the average number of available seats is <strong>ZERO.</strong><br>";
+                        echo "Please select another day.<br>";
+                    } else {
+                        echo "No day selected. Please select a day to view average number of seats.";
+                    }
                 }
             ?>
             <div class="space"></div>
